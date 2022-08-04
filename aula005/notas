@@ -1,0 +1,80 @@
+VARIAVEIS - IDENTIFICADOES
+
+- Imagine um estacionaento com muitas vagas:
+
+vaga a1 = carro   {sinal de igual é chamado de recebe''}
+A vaga estando ocupada não poderá receber outros caross
+
+-caso eu queira que a vaga não seja usando devo usar o seguinte
+vaga = null
+
+- Para criar variaveis devo usar a tag  var  , as var criadas devem receber identificadores EX:
+var n1
+var n2
+- Caso queira adicionar valores a essas variaveis nomeadas devo usar o sial de = (recebe):
+var n1 = 8.5
+var n2 = 4
+
+-  Assim como vagas tambem existe variaveis com tamanhos diferente maiores: (strings - sequencia de caracteres)
+var s1 = "javaScript"
+var s2 = 'Curso em video'  // posso usar aspas simples ou duplas
+var s3 = `Nogueira`  // há diferença no uso das aspas
+- O nome da cada variavel é chamado de identificadores - e há regras para esses identificadores
+devo usar: letras, $, e _
+NAO devo iniciar com: numeros
+NAO devo usar: espaços ao invés disso uso o _
+não posso usar alavras reservadas: funcion option ....
+posso usar: acentos e simbolos EX - ''média''
+
+- Podemos usar as variaveis no .NODE criando-as poderemos usalas futuramente:
+terminal aberto pelo atalho primeiro é aberto o shell, preciso digitar o comando (node)
+AO CRIAR VARIAVEIS(IDENTIFICADOES) considere as regras anteriores
+
+:::::DICAS:::::
+Ao criar uma variavel letras maiuscular e minuscalas tem diferença, EX:
+var a = 10          >>node / a mostrará 10
+var A = 20          >>node / A mostrará 20
+
+Procure usar nomes coerentes para as variaves EX:
+var nome  / var idade / var salario  / var sex  / var ident   / var tel
+----TIPO NUMBER:
+var ninteiro = 18  (numero inteiro)
+var nreais = 15.5  (numero real)
+----TIPO STRINGS:
+var google = "site"  >> as strings devem ser colocadas entre 'aspas'
+var armazen = 1500 itens
+var tel = 73-998142555 (strings tambem podem ser numeros pois contem pontos e traços)
+----TIPO BOELAN:
+false e true
+
+--- EXEMPLO LITERAL DE TIPSO DE CARACTERES: ---
+> n = "Amazon"
+'Amazon'
+> typeof n
+'string'
+> typeof 6
+'number'
+> typeof 6.6
+'number'
+> typeof 'Google'
+'string'
+> typeof '6.6'
+'string'
+> typeof []
+'object'
+> typeof {}
+'object'
+> typeof function{}[]
+typeof function{}[]      
+> typeof NaN
+'number'
+> typeof undefined
+'undefined'
+> typeof null
+'object'
+> typeof Infinity
+'number'
+>
+EM javaScript posso alterar valores das variaveis seja eles maiores ou menores,
+Posso modificar as var a qualquer momento.
+
