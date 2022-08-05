@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {  /*  esse é o seletor {} */
+            background-color: rgb(59, 107, 126);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <p>Eu desenvolvo em HTML e CSS, e programos em javaScript</p>
+
+    <script>
+        var n1 = Number(window.prompt('Digite um numero:'))  // mesmo enviando um number a prompr lerá como string
+        var n2 = Number(window.prompt('Digite outro numero:'))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // o sinal + pode ser usado para concateção e adição
+        // number + numer = (aadição)
+        // string + string = (concatenação)
+        // o erro da soma acontece porq o comando - prompt usado lê qualquer valor como string
+        // COMO CONVERTER STRING EM NUMBER:
+        // uso o paremtro Number antes do comando
+        // parseInt(n)  - para numeros inteiors // Number.parseFloat(n) para numeros reais
+        //---------------------
+        // CONVERTER NUMBER PARA STRING
+        // basta  usar a tag String antes do comando   - String(n) > n numero
+
+        //MUTIPLICAÇÃO
+        var v1 = Number(window.prompt('Digite um numero: '))
+        var v2 = Number(window.prompt('Digite outro numero: '))
+        var mult = v1 * v2
+        window.alert(`A mutiplicação entre ${v1} e ${v2} é igual a: ${mult}`)
+
+        var valor1 = Number(window.prompt('Digite um valor: '))
+        var valor2 = Number(window.prompt('Digite outro valor: '))
+        var result = valor1 - valor2
+        window.alert(`A subtração entre ${valor1} e ${valor2} é igual a: ${result}`)
+    </script>
+</body>
+</html>

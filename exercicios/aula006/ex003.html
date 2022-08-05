@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.writeln(`Olá <strong>${nome}</strong> Seu nome tem ${nome.length} letras!</br>`)
+        document.writeln(`O seu nome em letras maisuculas fica ${nome.toUpperCase()}</br>`)
+        document.writeln(`O seu nome em letra minusculas fica ${nome.toLowerCase()}</br>`)
+    </script>
+    <h1>Trabalhando com scripts</h1>
+    <button onclick="inicio()">Clique para começar!</button>
+    <script>
+        function inicio() {
+            var nome = window.prompt('Qual é o seu noem? ')
+            windows.alert(`Olá ${nome} é um prazer te conhecer!`)
+        }
+    </script>
+</body>
+</html>

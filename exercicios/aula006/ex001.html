@@ -7,7 +7,7 @@
     <title>Meu primeiro programa...</title>
     <style>
         body {  /*  esse é o seletor {} */
-            background-color: rgb(59, 59, 126);
+            background-color: rgb(59, 88, 126);
             color: white;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -19,12 +19,14 @@
     <p>Eu desenvolvo em HTML e CSS, e programos em javaScript</p>
     <script>
         /* comentario entre barra e asterisco - descrição // ao fim*/
+        var nome = window.prompt('Qual é o seu nome ?')
+        window.alert('É um grande prazer te conhecer,' + nome + '!!') //a var nome foi adicionada depois das aspas depois de um sinal de + que tem a função de concatenação (Relacionamento de ideias; ligação, encadeamento.)
 
-        alert('Minha primeira mensagem!') // caixa de alerta é exibida
-        confirm('Está gostando de JS?') // caixa de confirmação ou negação
-        prompt('Qual é o seu nome ?') // caixa com uma pergunta
+        var idade = window.prompt('Qual sua idade ?')
+        window.alert('Você tem' + idade + 'anos de idade!')
 
-        alert('D.A GOT THAT DOPE')
+        var filme = window.prompt('Qual seu filme preferido?')
+        window.alert(filme + 'Parece um bom filme, vou assistir!!')
     </script>
 </body>
 </html>
