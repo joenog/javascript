@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticar javaScript</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usando variaveis + function</h1>
+    <button onclick="clicou()">Clique</button>
+    <script>
+        function clicou() {
+            var nome = prompt('Qual é o seu nome ?')
+            var idade = prompt('Qual é o sua idade ?')
+            alert(`Seu nome é ${nome} e sua idade é ${idade}, seja bem vindo!`)
+        }
+    </script>
+    <h2>Segundo botão</h2>
+    <button onclick="clicou()">Clique aqui</button>
+    <script>
+        function clicou() {
+            var v1 = Number(prompt('Digite um numero: '))
+            var v2 = Number(prompt('Digite outro numero: '))
+            var soma = v1 + v2
+            alert(`A soma dos valore é: ${soma}`)
+        }
+    </script>
+</body>
+</html>

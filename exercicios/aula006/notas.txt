@@ -49,18 +49,18 @@ Mas qual é a diferença entra “Number.parseInt”, “Number.parseFloat” e 
 // Number.parseFloat: Numero com virgula
 // Number: Js vai decidir qual é
 
+// number + number : adição
+// string + string : concatenação
 ________________________________________________________________________
 
-
-Transformando um number em uma string
+---Transformando um number em uma string
 
 window.alert ('a soma dos numeros é: ' + soma.toString())  // Jeito mais antigo
 ou
 window.alert ('a soma dos numeros é: ' + String(soma))      // Jeito mais simples
 ________________________________________________________________________
 
-
-Formatando Strings:
+---Formatando Strings:  // usando a crase dupla
 
 var teste = 'java script’
 
@@ -68,17 +68,18 @@ var teste = 'java script’
 `eu estou aprendendo ${teste}` -> não esqueça de usar crase! concatenação simples com crases 
 e var dentro de ${}  <<(placeholder)
 
-teste.length              // conta quantos caracteres tem na variável string 
-teste.toUpperCase        // coloca tudo em caixa alta
-teste.toLowerCase        // coloca tudo em minúsculo 
+teste.length              // conta quantos caracteres tem a string 
+teste.toUpperCase()        // coloca tudo em caixa alta
+teste.toLowerCase()        // coloca tudo em minúsculo 
+()abro e fecho parecente para a chamada do método
 ________________________________________________________________________
 
-Formatando números:
+---Formatando números:
 
-Var n1 = 1543.5
+Var n1 = 1545.5
 
 n1.toFixed(2) 
-// Coloca em duas casas decimais (para colocar em mais ou menos casas troque o numero entre parênteses)
+// Coloca em duas casas decimais (para colocar em mais ou menos casas troque o numero entre parênteses) >> 1545.50
 
 n1.toFixed(2).replace (‘.’, ‘,’)  
 // Troca o ponto pela virgula
