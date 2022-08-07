@@ -36,7 +36,7 @@ Boolean;
 // Strings: Maria, Google, Joao, pedreiro, (seu CPF) -> Basicamente cadeia de caracteres
 // Boolean: True; False
 ________________________________________________________________________
------AULA 6------
+[AULA 6]
 Transformando uma string em um number
 
 var n1 = Number.parseInt (window.prompt ('digite aqui um numero!'))
@@ -71,7 +71,7 @@ e var dentro de ${}  <<(placeholder)
 teste.length              // conta quantos caracteres tem a string 
 teste.toUpperCase()        // coloca tudo em caixa alta
 teste.toLowerCase()        // coloca tudo em minúsculo 
-()abro e fecho parecente para a chamada do método
+()uso parenteses para a chamada do método
 ________________________________________________________________________
 
 ---Formatando números:
@@ -87,3 +87,96 @@ n1.toFixed(2).replace (‘.’, ‘,’)
 n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 // Coloca o R$ na frente do numero (pode trocar entre outras moedas, USD)
 _________________________________________________________________________
+[AULA 7]
+---(Operadores parte1  - Aritimeticos e atribuição)
+
+São eles:  +  -  *  /  %  ++
+Todos esse são operadores BINARIOS pois precisam de dois operandos(numeros)
+
+* MUTIPLICAÇÃO       -- 5 + 2 : 10
+/ DIVISÃO            -- 5 / 2 : 2.5
+
+% RESTO DA DIVISÃO   -- 5 % 2 : 1    (Divisão inteira)
+(divido 5 por 2 = 4 então sobra 1 esse valor refere-se a este operador %) (divisão inteira)
+
+** POTENCIA          -- 5 ** 2 : 25  (5² ao quadrado² é igual a 25)
+
+---
+*** ATENTE-SE À PRECEDENCIA DE OPERADORES, POSIÇÃO E CONSIDERAÇÃO
+
+EX:   5 + 3 / 2 : ??  (atente-se nas operações, na programação é considerado primeiro a divisão)
+RESP: 5 + 3 / 2 : 6.5 (3 / 2 : 1.5 esse valor + 5 é igual a 6.5)
+(A linguagem só dirá que está errado caso haja erro sintatico como na posição dos caracteres)
+
+Caso precise executar a adição primeiro depois a divisão devo colocar a parte de adição entre ( )
+usando os (parenteses) será mudada a ordem de precedencia!
+
+EX:  (5 + 3) / 2 : 4  (Agora sim primeiro a adição 5 + 3 é 8 divido por 2 será  4)
+
+*** [ORDEM CONSIDERADA RESPECTIVAMENTE] >> 
+PRIMEIRO  CALCULA-se OQ ESTÁ ENTRE (), dps  **²,  DEPOIS  *  /  %,  DEPOIS +  -
+como a * / % - tem a mesma precedencia CALCULA-se oq vier primeiro!
+
+Todos resultados gerados por qualquer operação podem ser armazenados na - var (identific) EX:
+
+var a =  5 + 3        : 8
+var b =  a % 5        : 3   (8/5 igual a 1,, 1 vzs 5 igual à 5,, 5 para 8 igual a 3)
+var c =  5 * b ** 2   : 45  (var b:3 primeiro a potencia² > b ** 2 é igual À  9,, 9 * 5: 45)
+var d =  10 - a / 2   : 6   (var a:8 primeiro a divisão   > 8 divid por 2 é 4,, 10 menos 4: 6)
+var e =  6 * 2 / d    : 2   (*,/ tem precendencia igual   > 6 * 2 é 12,, 12 divido por 6: 2)  
+var f =  b % e + 4 / e :3   (b % e resta 1,, 1 mais (4/e: 2) 1 mais 2: 3)
+FAÇA ESSAS OPERAÇÕES NO NODE!
+----------
+Auto-atribuição
+var n = 4  >>  n = n + 4 ( somo ( n + 4: 8))  [var n] passará a valer 8
+isso é chamado de auto atribuição
+outros ex: n = n - 5  >>  (n - 5 : 3) a var n >> passará a valer 3
+outros ex: n = n * 2  >>  (n * 2 : 6) a var n >> passará a valer 6
+
+Auto-atribuição simplifica >>
+(x)QUANDO UMA VARIAVEL SE AUTO ATRIBUI POSSO SIMPLIFICAR A FORMA DA atribuição EX:
+Só posso usar este modo quando a variavel receber a si mesma.      > var k = 5
+AO inves de n = n + 4 >> [posso usar >> n += 4]                    > k *= 5
+                                                         node.>>   [25]
+                                                                   > k += 30
+----------                                                         [55]
+OPERADORES DE INCREMENTO 
+esse incremento simplifica ainda mais o metodo(x) anterior veja!
+Esse operador sempre incrementará (1) unidade ou decrementará (-1)
+isso vai depender do sinal usado (++) ou (--)
+var n = 5
+AO inves de n = n + 1 >> posso usar >> n += 1 :6  ou incrementado 1 automatico
+n é 6 >>  (posso usar esse incremento simplificado antes ou depois da var (++n :7))
+(++n : 8   >>   ++ n : 9    >>   ++n : 10   >>  --n : 9    >>   --n : 8 ....)
+________________________________________________________________________
+AULA 8 - Operadores part2 [OPERADORES RELACIONAIS]
+
+(> maiorq,  < menorq) (>= maior ou igual, <= menor ou igual) (== igual,  != diferent)
+-Pra toda expressao que tenha um operador relaicona ligado a ela, o resultado será
+sempre um valor Booleano (false, True)
+EX:
+(5 > 2 : true)    (7 < 4 : false)  (8 >= 8 : true)
+(9 <= 7 : false)  (5 == 5 : true)  (4 != 4 : false)
+--Exemplo com variavel
+var a = 5 ... var b = 10  ...  (a > b : false)
+
+--Quando tenho expressao Aritimeticas e relacionais juntas resolvo primeiro 
+as Aritimeticas       --EX: seguindo as variaveis anteriores
+    
+    var a >= b - 3 : false  ((var b) é 10, menos 3 é 7, logo (var a:5) não é >=7)
+        var a != b : true   ((var a: 5) é diferente da  var b: 8)
+------
+[OPERADORES DE IDENTIDADE ( === , igualdade restrita)] 
+
+EX: 5 == 5 : true  (sim 5 é igual a cinco)
+   5 == '5': true  (sim, mesmo sendo uma string, o Js nao testa o tipo, Number or string)
+  5 === '5': false (não é igual, usando === , a pergunta é se o valor é identico, neste
+  caso são diferentes pois o 5 é Num, e '5' uma string)
+ 5 !== '5': true  (5 é desigual restrito de '5', true!)
+-----------------------------
+
+[OPERADORES LOGICOS]
+
+(!)  NEGAÇÃO-    deny       (não) -- false   or  true
+(&&) JUNÇÃO -    juncion    (e)   -- 
+(||) DISJUNÇÃO - disjuncion (ou)  -- 

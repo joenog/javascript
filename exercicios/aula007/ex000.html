@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Javascript</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-indent: 5px;
+            margin: auto;
+            width: 600px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: beige; color: black; border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        button:hover {
+            background-color: lightcoral;
+            transition-duration: 1s;
+        }
+
+        div {
+            width: 400; height: 300;
+            background-color: white; border-radius: 5px;
+            padding: 5px; margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Calculando salário</h2>
+        <button onclick="clicou1()">INICIAR</button>
+        <script>
+            function clicou1() {
+                var hora = Number(prompt('Quantas horas você trabalha por dia na empresa ?'))
+                var vhora = 10
+                var mes = 20
+                var mt = hora * vhora * mes
+                alert(`Você trabalhou ${hora} por dia, seu salário será de: ${mt}`)
+            }
+        </script>
+    </div>
+    <!------------------------------------------------------------------->
+
+    <div>
+        <h2>Incrementando numeros</h2>
+        <button onclick="clicou2()">INICIAR</button>
+        <script>
+            function clicou2() {
+            var num = Number(prompt('DIGITE UM NUMERO!'))
+            var num = ++num
+            var result = num
+            alert(`O resultado é: ${num}`)
+            }
+        </script>
+    </div>
+
+    <!--------------------------------------------------------->
+
+    <div>
+        <h2>Teste idade!</h2>
+        <button onclick="clicou3()">INICIAR</button>
+        <script>
+            function clicou3() {
+                var idade = Number(prompt('Qual é sua idade?'))
+                var ok = 18
+                if (idade < 18) {
+                    document.write(`<h1 style='color: red;'>Você tem menos de 18 anos saia do site!!</h1>`)
+                }
+            }
+        </script>
+    </div>
+
+    <!---------------------------------------------------------------->
+    <div>
+        <h2>Preço dos produtos</h2>
+        <button onclick="clicou4()">INICIAR</button>
+        <script>
+            function clicou4() {
+                var gasto = prompt('Quanto você gastou esse mês?')
+                var mesada = 400
+                if (gasto > 400) {
+                    alert('Você gastou demais !!')
+                } else {
+                    alert('Parabens conseguiu gastar igual um ser humano normal!!')
+                }
+            }
+        </script>
+    </div>
+    <!------------------------------------------------------------------->
+    <div>
+        <h2>Raiz quadrada</h2>
+        <button onclick="clicou5()">INICIAR</button>
+        <script>
+            function clicou5() {
+                var resp = prompt('Qual a raiz quadada de 81')
+                var rai = 9
+                if (resp == rai) {
+                    alert('Parabens você acertou!')
+                } else {
+                    alert('ERROU FEIO VIU KKKKK')
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

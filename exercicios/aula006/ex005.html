@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando mais</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: rgb(40, 102, 156);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usando Javascript para tratar dados</h1>
+    <script>
+        var n1 = Number(prompt('Digite um numero'))
+        var n2 = Number(prompt('Digite outro numero'))
+        var soma = n1 + n2
+        alert(`${n1} + ${n2} é ${soma}`)
+    </script>
+
+    <h2>Botaão de iniciação</h2>
+    <button onclick="clicou()">Clique em mim</button>
+    <script>
+        function clicou() {
+            var nome = prompt('Qual é o seu nome ?')
+            var idade = prompt('E quantos anos você tem?')
+            document.write(`Olá ${nome} seja bem vindo. VocÊ tem ${idade} de idade!`)
+        }
+    </script>
+</body>
+</html>
