@@ -87,10 +87,9 @@ n1.toFixed(2).replace (‘.’, ‘,’)
 n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 // Coloca o R$ na frente do numero (pode trocar entre outras moedas, USD)
 _________________________________________________________________________
-[AULA 7]
----(Operadores parte1  - Aritimeticos e atribuição)
+}}[AULA 7.] (Operadores Aritimeticos - PARTE 1)
 
-São eles:  +  -  *  /  %  ++
+São eles:  +  -  *  /  %  
 Todos esse são operadores BINARIOS pois precisam de dois operandos(numeros)
 
 * MUTIPLICAÇÃO       -- 5 + 2 : 10
@@ -102,7 +101,7 @@ Todos esse são operadores BINARIOS pois precisam de dois operandos(numeros)
 ** POTENCIA          -- 5 ** 2 : 25  (5² ao quadrado² é igual a 25)
 
 ---
-*** ATENTE-SE À PRECEDENCIA DE OPERADORES, POSIÇÃO E CONSIDERAÇÃO
+}}7.1 ATENTE-SE À PRECEDENCIA DE OPERADORES, POSIÇÃO E CONSIDERAÇÃO
 
 EX:   5 + 3 / 2 : ??  (atente-se nas operações, na programação é considerado primeiro a divisão)
 RESP: 5 + 3 / 2 : 6.5 (3 / 2 : 1.5 esse valor + 5 é igual a 6.5)
@@ -113,11 +112,12 @@ usando os (parenteses) será mudada a ordem de precedencia!
 
 EX:  (5 + 3) / 2 : 4  (Agora sim primeiro a adição 5 + 3 é 8 divido por 2 será  4)
 
-*** [ORDEM CONSIDERADA RESPECTIVAMENTE] >> 
+}}7.2 [ORDEM CONSIDERADA RESPECTIVAMENTE] >> 
 PRIMEIRO  CALCULA-se OQ ESTÁ ENTRE (), dps  **²,  DEPOIS  *  /  %,  DEPOIS +  -
 como a * / % - tem a mesma precedencia CALCULA-se oq vier primeiro!
+EX: (3 + 2) ** 2 * 2 / 5 % 3 + 6 - 2: 5
 
-Todos resultados gerados por qualquer operação podem ser armazenados na - var (identific) EX:
+Todos resultados gerados por qualq operação podem ser armazenados em - var (identificadores) EX:
 
 var a =  5 + 3        : 8
 var b =  a % 5        : 3   (8/5 igual a 1,, 1 vzs 5 igual à 5,, 5 para 8 igual a 3)
@@ -127,7 +127,15 @@ var e =  6 * 2 / d    : 2   (*,/ tem precendencia igual   > 6 * 2 é 12,, 12 div
 var f =  b % e + 4 / e :3   (b % e resta 1,, 1 mais (4/e: 2) 1 mais 2: 3)
 FAÇA ESSAS OPERAÇÕES NO NODE!
 ----------
-Auto-atribuição
+}}7.3 Operadores de atribuição
+
+Nome	Operador encurtado	Significado
+Atribuição	x = y              	    x = y
+Atribuição de adição	x += y	      x = x + y
+Atribuição de subtração	x -= y	    x = x - y
+Atribuição de multiplicação	x *= y	x = x * y  ....
+----------
+}}7.3 Auto-atribuição
 var n = 4  >>  n = n + 4 ( somo ( n + 4: 8))  [var n] passará a valer 8
 isso é chamado de auto atribuição
 outros ex: n = n - 5  >>  (n - 5 : 3) a var n >> passará a valer 3
@@ -138,21 +146,23 @@ Auto-atribuição simplifica >>
 Só posso usar este modo quando a variavel receber a si mesma.      > var k = 5
 AO inves de n = n + 4 >> [posso usar >> n += 4]                    > k *= 5
                                                          node.>>   [25]
-                                                                   > k += 30
-----------                                                         [55]
-OPERADORES DE INCREMENTO 
+                                                                   > k += 5
+----------                                                         [30]
+}}7.4 OPERADORES DE INCREMENTO 
 esse incremento simplifica ainda mais o metodo(x) anterior veja!
 Esse operador sempre incrementará (1) unidade ou decrementará (-1)
 isso vai depender do sinal usado (++) ou (--)
 var n = 5
 AO inves de n = n + 1 >> posso usar >> n += 1 :6  ou incrementado 1 automatico
 n é 6 >>  (posso usar esse incremento simplificado antes ou depois da var (++n :7))
-(++n : 8   >>   ++ n : 9    >>   ++n : 10   >>  --n : 9    >>   --n : 8 ....)
+(++n : 8   >>   ++n : 9    >>   ++n : 10   >>  --n : 9    >>   --n : 8 ....)
+
 ________________________________________________________________________
-AULA 8 - Operadores part2 [OPERADORES RELACIONAIS]
+
+}}AULA 8 - Operadores part2 [OPERADORES RELACIONAIS]
 
 (> maiorq,  < menorq) (>= maior ou igual, <= menor ou igual) (== igual,  != diferent)
--Pra toda expressao que tenha um operador relaicona ligado a ela, o resultado será
+-Pra toda expressao que tenha um operador relacional ligado a ela, o resultado será
 sempre um valor Booleano (false, True)
 EX:
 (5 > 2 : true)    (7 < 4 : false)  (8 >= 8 : true)
@@ -161,22 +171,141 @@ EX:
 var a = 5 ... var b = 10  ...  (a > b : false)
 
 --Quando tenho expressao Aritimeticas e relacionais juntas resolvo primeiro 
-as Aritimeticas       --EX: seguindo as variaveis anteriores
-    
+as Aritimeticas    --EX: seguindo as variaveis anteriores
+(var a = 5 ... var b = 10) 
     var a >= b - 3 : false  ((var b) é 10, menos 3 é 7, logo (var a:5) não é >=7)
         var a != b : true   ((var a: 5) é diferente da  var b: 8)
-------
-[OPERADORES DE IDENTIDADE ( === , igualdade restrita)] 
+--------------------
 
-EX: 5 == 5 : true  (sim 5 é igual a cinco)
-   5 == '5': true  (sim, mesmo sendo uma string, o Js nao testa o tipo, Number or string)
-  5 === '5': false (não é igual, usando === , a pergunta é se o valor é identico, neste
+}}8.1 OPERADORES DE IDENTIDADE ( === , igualdade restrita)] 
+
+EX:      5 == 5 : true  (sim 5 é igual a cinco)
+         5 == '5': true  (sim, mesmo sendo uma string, o Js nao testa o tipo, Number or string)
+identic? 5 === '5': false (não é igual, usando === , a pergunta é se o valor é identico, neste
   caso são diferentes pois o 5 é Num, e '5' uma string)
  5 !== '5': true  (5 é desigual restrito de '5', true!)
 -----------------------------
 
-[OPERADORES LOGICOS]
+}}8.2[OPERADORES LOGICOS] !  &&  ||
 
-(!)  NEGAÇÃO-    deny       (não) -- false   or  true
-(&&) JUNÇÃO -    juncion    (e)   -- 
-(||) DISJUNÇÃO - disjuncion (ou)  -- 
+[!]  NEGAÇÃO -   (não) >> Requiro algo se obtivero resultado   | true  > false |
+esperado tenho TRUE, se não recebo oq peço tenho FALSE.        | false > true  |
+-EX: Operado unario, depois da !, eu coloco (false or true)    (operador unário)
+
+(!não) for true : false ,,, algo que não é verdadeiro será falso
+(!não) for false : true ,,, algo que não é falso será verdadeiro
+-------
+[&&] CONJUNÇÃO - ((e) lógico, X e Y)   >> Na conjunção requiro dois itens, so terei
+o resultado TRUE caso receba os dois, se recebo apenas um true e outros false, no fim
+o resultado sera false. Este operador é binário ou seja eu tenho dois valores logicos:
+
+true  (&& e) true : true    (true and true is true, os dois result preisam ser TRUE)
+true  (&& e) false: false   -na resposta binaria se um dos itens não for true
+false (&& e) true : false    a reposta será sempre false
+false (&& e) false: false
+-------
+[||] DISJUNÇÃO - ((ou) lógico, X ou Y) >> Da disjunção requiro dois itens, se eu
+receber os dois itens otimo TRUE, se recebo um dos itens e outro diferente TRUE,
+so terei um resultado FALSE caso os dois resultados sejam diferente do que requeri.
+- Tambem é um operador binário ha dois valores logicos:
+
+true  (||)  true: true  (basta que um deles seja verdadeiro para o resultdor ser true)
+true  (||) false: true
+false (||)  true: true
+false (||)false: false  (pipe|)
+-----
+}}8.3 ()ATENTE-se  quando tenho operadores logicos e relacionais na mesma operação,
+resolvo primeiro todos os operadores aritimeticos (** % / + *) depois resolvo
+os operadores relacionais (>, <, >=, <=, !=, ==,)  e por fim resolvo os 
+operadores logicos (!, &&, ||)  veja um exemplo abaixo: 
+
+(var a = 5) - (var b = 8)
+resp 2º       resolvo 1º
+[a > b] &&e  [b % 2 == 0]: false
+
+b % 2,  8 divid por 2 é 4 então me resta 0, é igual == 0, true
+a > b,  a5 não é maiorq b8, então tenho false
+------- true && false,  true AND false: (false)
+
+(var a = 5) - (var b = 8)
+resp 2º        resolvo 1º
+[a <= b] ||ou [b / 2 == 2]
+
+b8 / divid por 2 não é == igual a 2,     false \   false ||ou true: [true]
+a5 <= é menorq ou igual a b8 sim é menorq true /   basta que um seja verdadeiro
+
+**Se numa mesma operação eu tenho os 3 operadores LOGICOS essa será a ordem
+de resolução 1º - !no  depois &&and   porfim  ||or
+
+(ORDEM DE PRECEDENCIA ATUALIZADA)
+respectivamente...
+1º- Operadores Aritimeticos.  [ () ** /  ] ...  "Siga a ordem depois faça os outros"
+2º- Operadores Relacionais .  [ >  <  >= ] ...  "Sem ordem de precedencia"
+3º- Operadores Lógicos     .  [ ! &&  || ] ...  "Os logicos também devem sergui essa ordem"
+-----------
+}}8.4 - [OPERADOR TERNARIO]
+
+x [?] x [:] x - O operador ternario é a (? e :) dentro de uma mesma expressão.
+ele se chama ternario por que tem 3 partes (teste) ? (verdadeiro) : (falso)
+por isso ele se chamar ternario, porq ele junta 3 operandos...
+
+(teste) 1º é um teste lógico, com resultado (true or false)
+(verdadeiro) 2º é o que acontecera ser o resultado do teste for verdadeiro
+(false) 3º é o que acontecerá de o resultado do teste for falso
+
+var = media 8.5
+- media 8.5           (true)       (false)
+EX: média >= 7.0 [?]'APROVADO'[:]'REPROVADO'
+'APROVADO'
+
+- media += 0.5
+9.0             (true)       (false)
+- media > 9.1 ?'APROVADO':'REPROVADO'
+'REPROVADO'
+
+digitando essa expressão o resultado será aprovado ou reprovado,
+dependerá do teste logico realizado antes
+----------------------
+> var idade = 19
+19
+> var r = idade >= 18 ? 'MAIOR' : 'MENOR'
+> r
+'MAIOR'
+________________________________________________________________________
+                            [[[-RESUMO-]]]
+}OPERADORES ARITMETICOS
+EX: (3 + 2) ** 2 * 2 / 5 % 3 + 6 - 2: 5
+
+}OPERADORES DE ATRIBUIÇÃO 
+ x = y               (a = 5)
+ x = x + y           (x += x)
+ x = x - y           (x -= x)
+
+}OPERADORES RELACIONAIS
+(5 > 2 : true)    (7 < 4 : false)  (8 >= 8 : true)
+(9 <= 7 : false)  (5 == 5 : true)  (4 != 4 : false)
+
+}OPERADORES DE IDENTIDADE
+5 == 5 : true  (Nums iguais)
+5 == '5': true  (Num e String igual)
+5 === '5': false (Num e String são identicos ? nn)
+
+}OPERADORES LÓGICOS 
+[!] no    [&] and     [||] or
+    não       e            ou
+
+}OPERADOR TERNARIO
+X [?] X [:] X
+var = media 7.5  
+media 7.5   (test)    (true)       (false)
+EX: média >= 7.0 [?]'APROVADO'[:]'REPROVADO'  : 'REPROVADO'
+      
+}ORDEM DE PRECEDENCIA
+respectivamente...            {1º  2º  3º}
+1º- Operadores Aritimeticos.  [ () ** /  ] ...  "Siga a ordem depois faça os outros"
+2º- Operadores Relacionais .  [ >  <  >= ] ...  "Sem ordem de precedencia"
+3º- Operadores Lógicos     .  [ !  && || ] ...  "Logicos também devem seg essa ordem"
+4º- Operador Ternario      .  [[?] x [:] ] ...  "Sempre o ultimo a ser feito"
+________________________________________________________________________
+
+}}9.

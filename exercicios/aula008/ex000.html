@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores RELACIONAIS </title>
+    <style>
+        body {
+            background-color: lightcyan; font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            background-color: white; border-radius: 5px; padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores RELACIONAIS</h1>
+    <h2>A idade está entre 15 e 17 ?</h2>
+    <button onclick="clicou()">INICIAR</button>
+    <script>
+        function clicou() {
+            var idade = prompt('Digite sua idade:')
+            if (idade >= 15 && idade <=17) {
+                alert(`Sua idade está entre 15 e 17!!`)
+            } else {
+                alert(`Sua idade está fora dos parametros do programa!!`)
+            }
+        }
+    </script>
+
+    <h2>Qual é seu estado ?</h2>
+    <button onclick="clicou1()">INICIAR</button>
+    <script>
+        function clicou1() {
+            var est = String(prompt('Qual é o seu estado ?'))
+            if (est == 'SP' || est == 'RJ') {
+                alert(`Você mora nos estados elegiveis, continue!!`)
+            } else {
+                alert(`Você mora distante da nossa area de cobertura`)
+            }
+        }
+    </script>
+
+    <h2>Salario especifico</h2>
+    <button onclick="clicou2()">INICIAR</button>
+    <script>
+        function clicou2() {
+            var salario = Number(prompt('Digite seu salario:'))
+            var sexo = String(prompt('Digite seu sexo M - F'))
+            if (salario > 1499 && sexo != 'M') {
+                alert(`VocÊ é uma mulher que ganha mais de 1500 !!`)
+            } else {
+                alert(`KRL KKKKKKKKKKKK`)
+            }
+        }
+    </script>
+
+    <h2>Qual foi sua nota ?</h2>
+    <button onclick="clicou3()">INICIAR</button>
+    <script>
+        function clicou3() {
+            var nota = Number(prompt('Qual foi sua nota ?'))
+            if (nota >= 7) {
+                alert(`Parabens você passou`)
+            } else {
+                alert(`PERDEU KKKKKKKKKKKKKK`)
+            }
+        }
+    </script>
+</body>
+</html>
