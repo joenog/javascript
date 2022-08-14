@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font: normal 1.3em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            padding:  5px 5px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid white;
+            width: 100px;
+        }
+
+        div {
+            background-color: white;
+            margin: 5px;  
+            text-indent: 5px;
+            width: 150px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <label for="txtn1">N1</label>
+    <input type="number" name="txtn1" id="txtn1" min="0" required> + <br>
+    <label for="txtn2">N2</label>
+    <input type="number" name="txtn2" id="txtn2" min="0" required>
+    <input type="button" value="SOMAR" onclick="somou()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function somou() {
+            var tn1 = document.querySelector('#txtn1')
+            var tn2 = document.querySelector('#txtn2')
+            var res = document.querySelector('#res')
+            var n1 = Number(tn1.value)  //converti o valor de n1 para Number
+            var n2 = Number(tn2.value) 
+            var s = n1 + n2
+            res.innerHTML = `${n1.toLocaleString('pt-br')} + ${n2}: <strong>${s.toLocaleString('pt-BR')}</strong>`
+        }
+    </script>
+</body>
+</html>
