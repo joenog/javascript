@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
+            font-weight: 1.3em;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: overline;
+        }
+
+        div {
+            background-color: lightslategray;
+            width: 360px;
+            height: 150px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: white;
+            margin: 10px;
+        }
+
+        button {
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Praticando com todos os Operadores</h1>
+    <div>
+        <h2>Operadores Aritméticos</h2>
+        <h3>Soma de numeros</h3>
+        <button onclick="clicou01()">INICIAR</button>
+        <script>
+            function clicou01() {
+                var n1 = Number(prompt('Primeiro numero:'))
+                var n2 = Number(prompt('Segundo numero:'))
+                var result = n1 + n2
+                alert(`${n1} + ${n2} : ${result}`)
+            }
+        </script>
+        </div>
+        <div>
+            <h2>Calculando salário</h2>
+            <h3>Quando receberei este mês ?</h3>
+            <button onclick="clicou02()">INICIAR</button>
+            <script>
+                function clicou02() {
+                    var horas = Number(prompt('Quantas horas trabalhou?'))
+                    var aula = 4.6
+                    var salario = horas * aula * 4
+                    alert(`Seu salario será de: R$ ${salario.toLocaleString('pt-BR')}`)
+                }
+            </script>
+        </div>
+
+        <div>
+            <h2>Está caro ?</h2>
+            <button onclick="clicou03()">INICIAR</button>
+            <script>
+                function clicou03() {
+                    var valor = Number(prompt('Qual foi o valor ?'))
+                    var preço = 200.50
+                    if (valor <= preço) {
+                        alert('O valor está OK')
+                    } else {
+                        alert('Caro pra krl kkkkkkkkkk')
+                    }
+                }
+            </script>
+        </div>
+
+        <div>
+            <h2>Qual é o curso ?</h2>
+            <button onclick="clicou04()">INICIAR</button>
+            <script>
+                function clicou04() {
+                    var mcurso = String(prompt('Qual curso você esta fazendo ?'))
+                    var curso = 'JavaScript'
+                    if (mcurso == curso) {
+                        alert('Esse é o curso !!!')
+                    } else {
+                        alert(`${mcurso} ? que isso mano lllllkkkkkkkkk`)
+                    }
+                }
+            </script>
+        </div>
+</body>
+
+</html>

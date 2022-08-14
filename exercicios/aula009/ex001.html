@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo sobre DOM</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p> <br>
+    <p>Aprendendo usar o <strong>DOM</strong> em javaScript</p> <br>
+    <div id="msg">Clique em Mim</div>
+    <br>
+
+    <div id="query">AQUI FOI USADO O querySelector por CSS</div>
+    <br>
+
+    <div class="ponto">QUERY usando CLASS</div>
+
+    <p id="pra">AQUI VAI MAIS UM TESTE</p>
+
+    <p>ELEMENTE BUSCADO POR TAG NAME</p>
+
+    <p id="uml">AQUI FOI SELECIONADO POR QUERY NUMA LINHA</p>
+
+    <br>
+    <script>
+        // posso escrever
+        // consigo ter acesso a varios componetnes usado o DOM
+        document.write('1º//    ' + document.URL)
+        //-----------
+        // var p1 recebe e busca o elemnto por nome - p,  nº 0
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write(p1.innerText)
+        p1.style.color = "blue"  //posso mudar o estilo
+        // innerText - o text oq está dentro da tag
+        //------------
+
+        var corpo = document.body
+        corpo.style.background = "#208080"
+        document.write(p1.innerHTML)
+        // innerHTML - mostra a tag com estilo aplicado
+        //-------------
+
+        var div = document.getElementById('msg')
+        div.style.background = 'gray' // posso mudar estilo
+        div.innerText = 'Estou aguardando...' //mudei o conteudo da div
+
+        // essa mesma seleção pode ser feita por ID, NAME...
+        //-------------
+
+        var divquery = document.querySelector('div#query')
+        divquery.style.background = 'purple'
+
+        var divponto = document.querySelector('div.ponto')
+        divponto.style.background = 'lightyellow'
+
+        var que = document.querySelector('p#pra')
+        que.style.background = 'red'
+
+        // aqui tenho a seleção e formatação completa do item sem VAR
+        document.getElementsByTagName('p')[3].style.background ='green'
+
+        document.querySelector('p#uml').style.background ='black'
+        document.querySelector('p#uml').style.color = 'white'
+
+    </script>
+</body>
+</html>

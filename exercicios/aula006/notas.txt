@@ -134,7 +134,7 @@ Atribuição	x = y              	    x = y
 Atribuição de adição	x += y	      x = x + y
 Atribuição de subtração	x -= y	    x = x - y
 Atribuição de multiplicação	x *= y	x = x * y  ....
-----------
+---------------------
 }}7.3 Auto-atribuição
 var n = 4  >>  n = n + 4 ( somo ( n + 4: 8))  [var n] passará a valer 8
 isso é chamado de auto atribuição
@@ -147,7 +147,7 @@ Só posso usar este modo quando a variavel receber a si mesma.      > var k = 5
 AO inves de n = n + 4 >> [posso usar >> n += 4]                    > k *= 5
                                                          node.>>   [25]
                                                                    > k += 5
-----------                                                         [30]
+------------------------------                                                      [30]
 }}7.4 OPERADORES DE INCREMENTO 
 esse incremento simplifica ainda mais o metodo(x) anterior veja!
 Esse operador sempre incrementará (1) unidade ou decrementará (-1)
@@ -175,8 +175,8 @@ as Aritimeticas    --EX: seguindo as variaveis anteriores
 (var a = 5 ... var b = 10) 
     var a >= b - 3 : false  ((var b) é 10, menos 3 é 7, logo (var a:5) não é >=7)
         var a != b : true   ((var a: 5) é diferente da  var b: 8)
---------------------
 
+------------------------------
 }}8.1 OPERADORES DE IDENTIDADE ( === , igualdade restrita)] 
 
 EX:      5 == 5 : true  (sim 5 é igual a cinco)
@@ -184,8 +184,8 @@ EX:      5 == 5 : true  (sim 5 é igual a cinco)
 identic? 5 === '5': false (não é igual, usando === , a pergunta é se o valor é identico, neste
   caso são diferentes pois o 5 é Num, e '5' uma string)
  5 !== '5': true  (5 é desigual restrito de '5', true!)
------------------------------
 
+-------------------------
 }}8.2[OPERADORES LOGICOS] !  &&  ||
 
 [!]  NEGAÇÃO -   (não) >> Requiro algo se obtivero resultado   | true  > false |
@@ -213,7 +213,8 @@ true  (||)  true: true  (basta que um deles seja verdadeiro para o resultdor ser
 true  (||) false: true
 false (||)  true: true
 false (||)false: false  (pipe|)
------
+
+-------------------------------
 }}8.3 ()ATENTE-se  quando tenho operadores logicos e relacionais na mesma operação,
 resolvo primeiro todos os operadores aritimeticos (** % / + *) depois resolvo
 os operadores relacionais (>, <, >=, <=, !=, ==,)  e por fim resolvo os 
@@ -242,7 +243,8 @@ respectivamente...
 1º- Operadores Aritimeticos.  [ () ** /  ] ...  "Siga a ordem depois faça os outros"
 2º- Operadores Relacionais .  [ >  <  >= ] ...  "Sem ordem de precedencia"
 3º- Operadores Lógicos     .  [ ! &&  || ] ...  "Os logicos também devem sergui essa ordem"
------------
+
+----------------------------
 }}8.4 - [OPERADOR TERNARIO]
 
 x [?] x [:] x - O operador ternario é a (? e :) dentro de uma mesma expressão.
@@ -277,9 +279,9 @@ ________________________________________________________________________
 EX: (3 + 2) ** 2 * 2 / 5 % 3 + 6 - 2: 5
 
 }OPERADORES DE ATRIBUIÇÃO 
- x = y               (a = 5)
- x = x + y           (x += x)
- x = x - y           (x -= x)
+ x = y            (a = 5)          x = x * y     (x =* y)
+ x = x + y        (x += x)         x = x / y     (x =/ y)
+ x = x - y        (x -= x)
 
 }OPERADORES RELACIONAIS
 (5 > 2 : true)    (7 < 4 : false)  (8 >= 8 : true)
@@ -307,5 +309,121 @@ respectivamente...            {1º  2º  3º}
 3º- Operadores Lógicos     .  [ !  && || ] ...  "Logicos também devem seg essa ordem"
 4º- Operador Ternario      .  [[?] x [:] ] ...  "Sempre o ultimo a ser feito"
 ________________________________________________________________________
+MODULO C
+}}9. [DOM - DOCUMENT OBJECT MODEL] - Modelo de objetos para documentos
+- DOM É A VERTENTE WEB DO JScript -É um conjunto de objetos poderosos dentro
+do navegador que da acesso aos objetos internos dos sites, serve pro tratamento de componentes visuais.
 
-}}9.
+-Entendendo o DOM
+Basicamente é um conjuto de objetos dentro do navegador que vai dar acesso aos 
+componentes internos webSite, o DOM (não funciona dentro do node JS) ele só 
+está presente quando estou rodando JS dentro do navegador 
+------------
+
+}}9.1  AROVORE DOM
+A arvore DOM começa da raiz chamada window
+(raiz)
+1.0 [window]    - (tudo do js está dentro do objeto chamado window)
+dentro do window tenho varios outros objetos >>
+1.1 [location]  - (localização do site, URL, pagATUAL, pagANTERIOR)
+1.2 [document]  - (Documento atual onde está o HTML JS)
+1.3 [history]   - (Armazena de onde vc veio pra onde você vai, facilita a navegação)
+
+dentro de DOCUMENT, tenho o object HTML
+
+[1.2 document > HTML]     > html é o um (parent) de head e body
+          > head > body   > são filhos de HTML então são (child)
+"quem está acima é PARENT, logo os ligados abaixo são CHILD"
+
+.document (parent de HTML)
+   |
+    HTML  (parent de body && child de .document)
+     / \
+head     \ body (child de HTML)          \
+ |           \                            -- [Elementos da Arvore DOM]
+ |            \                          /
+meta title     |
+             h1, p, h2, div
+
+( ESSA É A ARVORE IERARQUICA DO SITE QUE ACABEI DE CRIAR )
+---------
+
+}}9.2  SELECIONANDO ELEMENTOS NO DOM
+[metodos de acesso]
+-Posso selecionar objetos da arvore de varias formas são elas
+- (por marca)-(por ID)-(por NOME)-(por Class)-(por SELETOR)
+
+dento de .document
+(por MARCA) - getElementByTagName() 
+neste comando seleciono o primeiro paragrafo do meu doc. html
+-Seleciono por VAR
+-- var p1 = window.document.getElementsByTagName('p')[0] <--ordem d paragrafos
+window.document.write('Está escrito assim.' + p1.innerText)
+p1
+//innerText - o text oque está sdentro da tag
+//innerHTML - mostra o conteudo e a formatão dele
+
+------
+
+(por ID) getElementtByID()
+<div id="msg">Clique em mim</div>  <!--id or name-->
+var d = document.getElementById('msg')
+      div.style.background = 'gray'   // posso mudar estilo
+         div.innerText = 'Estou aguardando...'   //mudei o conteudo da div
+-----
+
+(por NEM) getElementsByName()
+ // essa mesma seleção pode ser feita por ID, NAMEs [0,1,2]...
+-----
+
+(por CLASSE) getElementsByClassName()
+-----
+
+(por seletor)  querySelector()       
+ por CSS       querySelectorAll()
+
+ <div id="query">AQUI FOI USADO O querySelector por CSS</div>
+      var divquery = document.querySelector('div#query')
+        divquery.style.background = 'purple'
+------------------------------
+
+10}} [Eventos DOM]
+-DOM Documento object MODEL, ele é um facilitador que exite dentro do navegador
+para dar acesso aos Elementos diretamente no javaScript
+
+EVENTOS é tudo aquilo que possa acontecer com determinado item (div, h1..)
+Aventos mais comuns por exemplo numa div, são eventos de mouse, 
+- mouseEnter,  mouseMove, mouseDown,   mouseUp, click mouseOut (img ilustra)
+mouseEntrou, mouseMovveu, mousePrecionado, mouseSolto, cliquei e mouseFora
+[+info em - MDN js events (lista de eventos)]
+
+(Função em javaScript) funcion
+É um conjunto de codigo/linhas que vao ser executadas só quando o evento
+ocorrer
+----------
+BLOCO EM javaScripté delimitado dento dos sinais de {}
+           nome do evento
+em  funcion clicou() {
+  [comando que será execultado apenas quando o eventos acontecer]
+  [toda pag. será carregada mas o evento só depois da ação]
+}
+
+ <div id="area" onclick="clicou()" onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja...
+    </div>
+
+EX:  <script>
+        var a = document.querySelector('div#area')
+        //deixando a VAR fora do funcion posso usala para todas as açoes sem 
+        // precisar repetir o codigo
+        function clicou() {
+            a.innerHTML = 'Clicou!'
+            a.style.background = 'red'
+        }
+     </script>
+    
+(EVITANDO a poluIção no parametro DIV, coloque os EVENTOS dentro do <script>)
+
+EX:
+
+

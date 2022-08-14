@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background-color: gray;
+            color: white;
+            font: bolder 2em 'Arial';
+            width: 200px; height: 200px;
+            line-height: 200px; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--  <div id="area" onclick="clicou()" onmouseenter="entrou()"       onmouseout="saiu()">
+        Interaja...
+          </div> -->
+
+    <div id="area" onmouseenter="entrou">
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        //deixando a VAR fora do funcion posso usala para todas as açoes sem 
+        // precisar repetir o codigo
+        function clicou() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        
+        function entrou() {
+            a.innerText = 'Entrou'
+            a.style.background= 'blue'
+        }
+
+        function saiu() {
+            a.innerText = 'Saiu'
+            a.style.background = 'gray'
+        }
+    </script>
+</body>
+</html>
