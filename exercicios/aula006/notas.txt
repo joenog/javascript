@@ -387,43 +387,60 @@ var d = document.getElementById('msg')
         divquery.style.background = 'purple'
 ------------------------------
 
-10}} [Eventos DOM]
+}}10- [Eventos DOM]
 -DOM Documento object MODEL, ele é um facilitador que exite dentro do navegador
 para dar acesso aos Elementos diretamente no javaScript
 
 EVENTOS é tudo aquilo que possa acontecer com determinado item (div, h1..)
 Aventos mais comuns por exemplo numa div, são eventos de mouse, 
 - mouseEnter,  mouseMove, mouseDown,   mouseUp, click mouseOut (img ilustra)
-mouseEntrou, mouseMovveu, mousePrecionado, mouseSolto, cliquei e mouseFora
+mouseEntrou, mouseMoveu, mousePrecionado, mouseSolto, cliquei e mouseFora
 [+info em - MDN js events (lista de eventos)]
 
 (Função em javaScript) funcion
-É um conjunto de codigo/linhas que vao ser executadas só quando o evento
-ocorrer
+É um conjunto de codigo/linhas que vao ser executadas só quando o evento ocorrer
 ----------
+[funcion]
 BLOCO EM javaScripté delimitado dento dos sinais de {}
-           nome do evento
+           nome evento
 em  funcion clicou() {
-  [comando que será execultado apenas quando o eventos acontecer]
+  [comando que será execultado apenas quando o evento acontecer]
   [toda pag. será carregada mas o evento só depois da ação]
 }
 
- <div id="area" onclick="clicou()" onmouseenter="entrou()" onmouseout="saiu()">
+ <div id="area" onclick="clicou()" onmouseenter="entrou()">
         Interaja...
     </div>
 
 EX:  <script>
         var a = document.querySelector('div#area')
-        //deixando a VAR fora do funcion posso usala para todas as açoes sem 
-        // precisar repetir o codigo
+//deixando a VAR fora do funcion posso usala para todas as açoes sem precisar repetir o codigo
         function clicou() {
             a.innerHTML = 'Clicou!'
             a.style.background = 'red'
         }
      </script>
     
-(EVITANDO a poluIção no parametro DIV, coloque os EVENTOS dentro do <script>)
+(EVITANDO a poluIção no parametro DIV no HTML, coloque os EVENTOS dentro do <script>) listners / ouvidores
 
-EX:
+EX:       var a = document.getElementById('area')
+            a.addEventListener('click', clicou)                 / script js - coloco a  var
+            a.addEventListener('mouseenter', entrou)            \ e os listners
+            a.addEventListener('mouseout', saiu)
+________________________________________________________________________
 
+]}11 - CONDIÇÕES  part1
+
+Condição simples [if], se a condição for FLASE nada acontecerá 
+e o programa continuará rodando.
+if {}
+Condição Composta [else]  com essa ser o resultado for true o programa irá por 
+um caminha, se for false ele irá por outro caminho
+                  var pais = 'França'
+            console.log(`Vivendo em ${pais}`)
+            if (pais == 'Brasil') {
+                console.log(`Você é Brasileiro !`)
+            } else {
+                console.log(`Você é Estranjeiro!`)
+            }
 

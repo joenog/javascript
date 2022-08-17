@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Salário</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+            font: normal 1.3em Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: auto;
+            
+        }
+
+        input {
+            width: 80px;
+            border: 1px solid  white; border-radius: 3px;
+        }
+
+        label {
+            font: normal 0.8em Arial;
+            text-align: left;
+        }
+
+        div#form, #resultado{
+            position: relative;
+            background-color: grey;
+            padding: 15px; 
+            margin: 5px;
+            width: 170px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Calcular Salário</h2>
+            <div id="form">
+                <label for="hora">Horas</label>
+                <input type="number" name="hora" id="hora" min="0"> <br>
+                <label for="dolar">Dolar</label>
+                <input type="number" name="dolar" id="dolar" min="0">
+                <br>
+                <input type="submit" value="Enviar" onclick="clicou()">
+            </div>
+
+    <div id="resultado">
+        Resultado ...
+    </div>
+    
+    <script>
+        function clicou() {
+            var hr = document.querySelector('#hora')
+            var dol = document.querySelector('#dolar')
+            var res = document.querySelector('#resultado')
+            var nhr = Number(hr.value)
+            var ndol = Number(dol.value)
+            var soma = nhr * ndol * 4
+            resultado.innerText =  `Salário: ${soma.toLocaleString('pt-BR')}`
+        }
+    </script>
+</body>
+</html>

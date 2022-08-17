@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando javaScript</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="num1">N1</label>
+        <input type="number" name="num1" id="num1">
+        <label for="num2">N2</label>
+        <input type="number" name="num2" id="num2">
+        <input type="submit" value="Enviar" onclick="clicou()">
+    </form>
+        <div id="res">
+            Resultado ...
+        </div>
+    <script>
+        var n1 = document.querySelector('#num1')
+        var n2 = document.querySelector('#num2')
+        var res = document.querySelector('#res')
+        var nn1 = Number(n1.value)
+        var nn2 = Number(n2.value)
+        var soma = nn1 + nn2
+        soma.inerHTML = `A soma é/ ${soma}`
+    </script>
+</body>
+</html>
