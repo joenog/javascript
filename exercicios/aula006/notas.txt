@@ -443,4 +443,47 @@ um caminha, se for false ele irá por outro caminho
             } else {
                 console.log(`Você é Estranjeiro!`)
             }
+            ## textos interpolados entre crases ``
+        
+-- para execultar comando no console do VScode devo usar '' console.log ''
+________________________________________________________________________
 
+}}12 - CONDIÇÕES part2   [Condições Aninhadas]
+
+Nas condições Aninhadas posso aumentar minhas possibilidade de programação colocando
+condições dentro de condições. Aninhando uma condição dentro da outras  (aninhar.jpg)
+
+Condições aninhas 
+
+if { condição 1 }
+    se a condição 1 for verdadeira - essa será execultada
+    |
+    else {  ??  }
+        caso a condição anterior for falsa, a prox condição será chamada dentro do else
+            |
+        if { condição 2 }
+             caso a condição dois for satisfeita, essa será execultada
+             só será execultada se a cond1 for falsa
+                |
+            else {  bloco 3 }
+                    Esse será  execultado caso a condição dois for falsa
+
+img (condiçoes-aninhadas.jpg)
+**Também poderia colocar outra condição no meu bloco3, assim eu estaria aumentando 
+um nivel no meu aninhamento.
+
+[Ao fazer condiçoes sejam compostas ou aninhadas tome cuidado com ao escrever o codigo
+às vezs você pode não ter erro sintatico no codigo, mas pdoe haver erros lógicos, fazendo
+com seu programa funcione bem, mas de foma errada.]
+
+var idade = 19
+console.log(`Você tem ${idade} anos,`)
+if (idade < 16) {                                      [se a idade for menorq 16 não vota]
+    console.log('Não vota!')                            (else, if)
+} else if (idade >= 16 && idade < 18 || idade > 65) {  [senão, se a idade for < 18 e > 65, voto opcional]  
+        console.log('Voto opcional!')
+    } else if (idade >= 18) {                          [se a idade for >= 18 voto obrigatorio]
+        console.log('Voto obrigatório!')
+    }
+
+ASSISTIR NOAMENTE ATÉ MINUTO 17 -- DEPOIS EXCLUA ALINHA

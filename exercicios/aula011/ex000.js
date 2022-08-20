@@ -1,7 +1,4 @@
-var pais = 'França'
-console.log(`Vivendo em ${pais}`)
-if (pais == 'Brasil') {
-    console.log(`Você é Brasileiro !`)
-} else {
-    console.log(`Você é Estranjeiro!`)
-}
+var horas = 120
+var vhora = 4 * 4.60
+var result = horas * vhora
+console.log(`Seu salário é de: ${result}`)

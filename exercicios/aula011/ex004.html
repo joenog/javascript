@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form, div {
+            background-color: lightblue;
+            width: 300px; height:  120px;
+            border-radius: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Nacionalidade</h1>
+        <label for="ipais">País</label>
+        <input type="text" name="pais" id="ipais" required minlength="3">
+        <input type="button" value="ENVIAR" onclick="enviou()">
+    </form>
+
+    <div id="resp">
+    </div>
+
+    <script>
+        function enviou() {
+            var pais = document.querySelector('#ipais')
+            var res = document.querySelector('#resp')
+            res.innerHTML = `Nascido no(a)`
+            if (pais.value == 'Brasil') {
+                res.innerHTML += ` ${pais.value}, você é Brasileiro!`
+            } else {
+            res.innerHTML += ` ${pais.value}, você é estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>

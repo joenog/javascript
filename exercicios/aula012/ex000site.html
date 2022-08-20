@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posso sair ?</title>
+    <style>
+        body {
+            background-color: lightblue; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #iresp {
+            background-color: grey;
+            border-radius: 5px;
+            padding: 5px; margin: 5px;
+            width: 150px; height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Como está o clima ?</h2>
+    <form action="" method="get" autocomplete="on">
+        <label for="iclima">Clima</label>
+        <input type="text" name="clima" id="iclima">
+        <input type="button" value="Enviar" onclick="enviou()">
+    </form>
+    <div id="iresp"></div>
+    <script>
+            var clima = document.querySelector('#iclima')
+            var resp = document.querySelector('#iresp')
+        function enviou() {
+            if (clima = "chuvoso") {
+                resp.innerText = 'Fique em casa!'
+            } else if (clima = "estiado") {
+                resp.innerText = 'Pode sair!'
+            } else {
+                resp.innerText = 'Pode sair, mas  use protetor solar!'
+            }
+        }
+    </script>
+</body>
+</html>
