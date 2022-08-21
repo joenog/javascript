@@ -485,5 +485,41 @@ if (idade < 16) {                                      [se a idade for menorq 16
     } else if (idade >= 18) {                          [se a idade for >= 18 voto obrigatorio]
         console.log('Voto obrigatório!')
     }
-
+** ATENTE-SE A INDENTAÇÃO DO CODIGO, PARA TUDO FUNCIONAR BEM **
 ASSISTIR NOAMENTE ATÉ MINUTO 17 -- DEPOIS EXCLUA ALINHA
+--------------------------
+}}12.1  - Condiçoes Mutiplas
+
+Conheçamos a pressão switch - mais usada para valores fixos, (essa condoção/ expressão)
+serve para valores fixos, se tenho determinado resultado é execultado um comando
+se tenho outro resultado, então outro comando diferente será execultado (cond-mutipla.jpg)
+(**essa codição mutipla não é aplicavel para todos os tipos de situação)
+  - para essa condição usaremos o  [switch] e dentro dele o (case)
+            switch ( ){
+                case [e um bloco relacionado, igual ao if]
+            }
+            }default: // o parametro default serve como uma saida caso as condições
+            anteriores não forem o resutado esperado, 
+            }break   // dentro de cada bloco {} devemos colocar o break pois ele tem
+            a função de encerrar para que todos os parametros nao sejam executado.
+EX:
+    var agora = new Date() // chamada da data
+    var diaSem = agora.getDay()    // os dias da semana começam em 0, 1 ,2 - dom, seg - ter
+    switch(diaSem) {
+        case 0:
+            console.log('Domingo')
+            break                              // o BREAK é obrigatorio para que nao haja erro
+        case 1:
+            console.log('Segunda-Feira')
+            break
+        case 2:
+            console.log('Terça-Feira')
+            break
+        case 3:
+            console.log('Quarta-Feira')
+            break
+        default:
+            console.log('ERRO - Dia da semana inválido')
+            break
+        
+    }

@@ -11,31 +11,40 @@
             background-color: lightblue;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+         div, form {
+            background-color: white;
+            margin: 5px; height: 25px; width: 290px;
+            border-radius: 5px;
+            text-indent: 10px;
+            padding: 5px;
+         }
     </style>
 </head>
 
 <body>
     <h2>Posso votar ?</h2>
-    <label for="iidade">Idade</label>
-    <input type="number" name="idade" id="iidade" min="0">
-    <input type="button" value="Enviar" onclick="clicou()">
+    <form action="">
+        <label for="iidade">Idade</label>
+        <input type="number" name="idade" id="iidade" min="0">
+        <input type="button" value="Enviar" onclick="clicou()">
+    </form>
 
     <div id="resp"></div>
 
     <script>
-        var idade = document.querySelector('#iidade')
-        var idad = Number(idade.value)
-        var res = document.querySelector('#resp')
         function clicou() {
+            var idade = document.querySelector('#iidade')
+            var res = document.querySelector('#resp')
+            var idad = Number(idade.value)
+            res.innerText = `Você tem ${idad} anos, `
             if (idad < 16) {
-                res.innerHTML = 'Não pode votar'
-            } else if (idad >= 16 && idade < 18 || idade > 65) {
-                res.innerHTML = 'Voto opcional!'
-            } else if (idad >= 18) {
-                res.innerHTML = 'Voto obrigatório!'
+                res.innerText += ' não pode votar!'   //concatenção das strings
+            } else if (idad < 18 || idad > 65) {
+                    res.innerText += ' voto opcional!'
+                } else {
+                    res.innerHTML += ' voto obrigatorio!'
+                }
             }
-        }
     </script>
 </body>
-
 </html>
