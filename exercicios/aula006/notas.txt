@@ -490,10 +490,11 @@ ASSISTIR NOAMENTE ATÉ MINUTO 17 -- DEPOIS EXCLUA ALINHA
 --------------------------
 }}12.1  - Condiçoes Mutiplas
 
-Conheçamos a pressão switch - mais usada para valores fixos, (essa condoção/ expressão)
-serve para valores fixos, se tenho determinado resultado é execultado um comando
+Conheçamos a expressão switch - mais usada para valores fixos, (essa condoção/ expressão)
+serve para valores fixos, se tenho determinado resultado é execultado um comando,
 se tenho outro resultado, então outro comando diferente será execultado (cond-mutipla.jpg)
-(**essa codição mutipla não é aplicavel para todos os tipos de situação)
+(**essa codição mutipla não é aplicavel para todos os tipos de situação, ela não serve
+  bem para intervalos de valore com a condição if, mas sua constituição é parecida.)
   - para essa condição usaremos o  [switch] e dentro dele o (case)
             switch ( ){
                 case [e um bloco relacionado, igual ao if]
@@ -503,13 +504,13 @@ se tenho outro resultado, então outro comando diferente será execultado (cond-
             }break   // dentro de cada bloco {} devemos colocar o break pois ele tem
             a função de encerrar para que todos os parametros nao sejam executado.
 EX:
-    var agora = new Date() // chamada da data
-    var diaSem = agora.getDay()    // os dias da semana começam em 0, 1 ,2 - dom, seg - ter
+    var agora = new Date()         // chamada da data
+    var diaSem = agora.getDay()   // os dias da semana começam em  0, 1 ,2 - dom, seg, ter
     switch(diaSem) {
         case 0:
             console.log('Domingo')
             break                              // o BREAK é obrigatorio para que nao haja erro
-        case 1:
+        case 1:                               // break identifica o fim dum comando e segue o fluxo.
             console.log('Segunda-Feira')
             break
         case 2:
@@ -523,3 +524,4 @@ EX:
             break
         
     }
+________________________________________________________________________
