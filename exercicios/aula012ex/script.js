@@ -3,6 +3,7 @@ var img = document.querySelector('#img')
 var data = new Date()
 var hora = data.getHours()
 var min = data.getMinutes()
+
 msg.innerHTML = `${hora} : ${min}`
 
 if (hora >= 0 && hora < 12) {
