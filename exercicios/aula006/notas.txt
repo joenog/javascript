@@ -526,3 +526,45 @@ EX:
     }
 _____________________________________________________________________________
 
+}}13 - LAÇOS DE REPETIÇÃO
+
+AS REPETIÇÕES SÃO COMANDOS REPETIDOS QUE EXECUTAMOS PARA QUE UMA DETEMRINADA TAREFA SEJA 
+CONLUIDA, [de um ponto A até um ponto B vou execultando tarefas sequenciamente]. No meio 
+dessa dessa sequencia pode haver passos que eu não deva execultar, com isso devemos usar 
+as condiçoes que aprendemos anteriomente, seja simples ou compostas
+
+Os laços de repetição testa uma mesma condição varias vezes enquanto ela for verdadeira,
+se repete até que o valor da condição mude (img.repetição)   EX:
+
+}} [WHILE] ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO INICIO]
+faz-se o teste e sendo verdadeiro será feito o bloco{}
+
+enquanto
+while (condição) {
+    tudo que esta entre chaves é um bloco    [block]
+}
+---------------EX
+funcion (comerPizza) {
+    while (temFatia()){
+        comerFatia             [enquanto houver fatias serão comidas, até que acabe e o fluxo siga]
+    }
+}
+---------------EX
+var c = 1 
+while (c <= 6) {
+    console.log(`Passos ${c}`) 
+    c++                            (o cod será incrementado +1 até que o valor chegue a 6)
+}
+---------------------------
+[DO WHILE] - ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO FINAL
+
+var d = 2 
+do {
+    console.log(`DO-WHILE ${d}`)
+    d++
+} while (d <=3)
+
+/* (haverá casos e casos e para isso temos as duas opções) o [while] é a mais usada
+---------------------------------------
+
+}}13.1
