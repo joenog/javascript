@@ -571,18 +571,32 @@ do {
 /* (haverá casos e casos e para isso temos as duas opções) o [while] é a mais usada
 ---------------------------------------
 
-}}14 RESPETIÇÃO part2 - [ESTRTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE]
+}}14 REPETIÇÃO part2 - [ESTRTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE]
 
-Essa estrutura é representado pr um Exagono irregula <___> esse Exagono são feitas 3 coisas
-(1- INICIALIZAÇÃO  2- UM TESTE LOGICO - 3- INCREMENTO)
+Essa estrutura é representada por um Exagono irregular <___> nele são feitas 3 coisas
+(1- INICIALIZAÇÃO  2- UM TESTE LOGICO   3- INCREMENTO)
 Na primeira passagem é feito a (inicialização e o teste lógico) SENDO este teste lógico
 verdadeiro será execultado o bloco {o bloco pode ter 1 ou varios comandos}
-Feito o bloco o laço se repetira fazendo o 3º passo (ICREMENTO) então, o teste lógico
+Feito o bloco o laço se repetirá fazendo o 3º passo (ICREMENTO) então, o teste lógico
 é feito mais um vez e sendo verdadeiro o bloco será execultado e fará outro ICREMENTO
 e o looping vai acontecendo até que o teste lógico tenha o resultado FALSE então o codigo
 seguira para fora do bloco {}  (ESSA É [ESTRTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE])
 
-{ [WHILE e FOR] usamos quando sabemos os limites das execuções (var c=1; c<=10; c++)}
+{[WHILE e FOR] usamos quando sabemos os limites das execuções (var c=1; c<=10; c++)}
 
 ---EX:
+var c = 1
+while (c <= 5) {
+    console.log('Bom dia!')
+    c++
+}
 
+/* Mesmo cod. usando FOR */
+
+for (c=1; c<=5; c++) {    <---  [aqui tenho, inicialização calculo e incremento]
+    console.log('Bom dia!')
+}
+
+[Posso usar o modo de DEPURAÇÃO / DEBUG, para monitorar a execução dos Scripts,
+saber se estão funcionado bem ou se há erros]
+ } Atente-se as vezes não ha erro no coddigo(sintaxe) mas pode haver erros de llogica }
