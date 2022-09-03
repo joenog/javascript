@@ -530,23 +530,27 @@ _____________________________________________________________________________
 
 AS REPETIÇÕES SÃO COMANDOS REPETIDOS QUE EXECUTAMOS PARA QUE UMA DETEMRINADA TAREFA SEJA 
 CONLUIDA, [de um ponto A até um ponto B vou execultando tarefas sequenciamente]. No meio 
-dessa dessa sequencia pode haver passos que eu não deva execultar, com isso devemos usar 
+dessa sequencia pode haver passos que eu não deva execultar porque nem tudo é sequencial
+az vezes tenho desvios ou outras possiblidades, com isso devemos usar 
 as condiçoes que aprendemos anteriomente, seja simples ou compostas
 
 Os laços de repetição testa uma mesma condição varias vezes enquanto ela for verdadeira,
-se repete até que o valor da condição mude (img.repetição)   EX:
+se repete até que o valor da condição mude (images/while)   EX:
 
 }} [WHILE] ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO INICIO]
 faz-se o teste e sendo verdadeiro será feito o bloco{}
 
 enquanto
-while (condição) {
-    tudo que esta entre chaves é um bloco    [block]
+while (condição) {     
+    [block] tudo que esta entre chaves é um bloco   
 }
+    [enquanto a condição for TRUE o laço(block) se repetira até q isso mude]
+    [quando a condição for FALSE  o fluxo será desviado para fora das {}]
+
 ---------------EX
 funcion (comerPizza) {
-    while (temFatia()){
-        comerFatia             [enquanto houver fatias serão comidas, até que acabe e o fluxo siga]
+    while (temFatia()){    [enquanto o teste feito for TRUE o laço se repetira até q isso mude]
+        comerFatia         [enquanto houver fatias serão comidas, até que acabe e o fluxo siga]
     }
 }
 ---------------EX
@@ -556,7 +560,7 @@ while (c <= 6) {
     c++                            (o cod será incrementado +1 até que o valor chegue a 6)
 }
 ---------------------------
-[DO WHILE] - ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO FINAL
+}[DO WHILE] - ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO FINAL
 
 var d = 2 
 do {
@@ -567,4 +571,18 @@ do {
 /* (haverá casos e casos e para isso temos as duas opções) o [while] é a mais usada
 ---------------------------------------
 
-}}13.1
+}}14 RESPETIÇÃO part2 - [ESTRTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE]
+
+Essa estrutura é representado pr um Exagono irregula <___> esse Exagono são feitas 3 coisas
+(1- INICIALIZAÇÃO  2- UM TESTE LOGICO - 3- INCREMENTO)
+Na primeira passagem é feito a (inicialização e o teste lógico) SENDO este teste lógico
+verdadeiro será execultado o bloco {o bloco pode ter 1 ou varios comandos}
+Feito o bloco o laço se repetira fazendo o 3º passo (ICREMENTO) então, o teste lógico
+é feito mais um vez e sendo verdadeiro o bloco será execultado e fará outro ICREMENTO
+e o looping vai acontecendo até que o teste lógico tenha o resultado FALSE então o codigo
+seguira para fora do bloco {}  (ESSA É [ESTRTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE])
+
+{ [WHILE e FOR] usamos quando sabemos os limites das execuções (var c=1; c<=10; c++)}
+
+---EX:
+
