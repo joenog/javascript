@@ -600,3 +600,54 @@ for (c=1; c<=5; c++) {    <---  [aqui tenho, inicialização calculo e increment
 [Posso usar o modo de DEPURAÇÃO / DEBUG, para monitorar a execução dos Scripts,
 saber se estão funcionado bem ou se há erros]
  } Atente-se as vezes não ha erro no coddigo(sintaxe) mas pode haver erros de llogica }
+________________________________________________________________________
+
+}}15 [VARIAVEIS COMPOSTAS]
+
+- Variaveis simples só conseguem armazenar uma VAR por vez,( apenas um valor) EX:
+VAR n = 5  >>  VAR n = 20  ( o valor da var será  subistituido)
+
+- Variaveis compostas podem armazenar varios vares na mesma estrutura  EX:
+
+Criando um Array
+var frutas = ['Maçã', 'Banana'];
+
+console.log(frutas.length);
+// 2
+Acessar um item (index) do Array
+var primeiro = frutas[0];
+// Maçã
+var ultimo = frutas[frutas.length - 1];
+// Banana
+-----
+Numa variavel composta, posso criar uma var com varios itens, e identificalos com indices
+(uma VAR que guarda varios valores) - auto
+vetor array  ou variavel composta  é \        - var auto = []
+[VETOR É UMA  VARIAVEL CM VARIOS ESPAÇOES]    - var auto = ['gol', 'hb20', 'argo']
+[Um VETOR  é composto por elementos]                          0       1       2
+[UM elemento VETOR, é um par que agrupa >> O espaço na memoria, o valor atribuido a ele(nome)
+e o indice - que são os numeros das posições aos valores [0,1,2,3,4,5...]]
+
+(cada  array é composta por um 'valor' e uma  chave de identificação)
+
+----- let num = [5, 8, 2]  - um vertor com 3 elementos
+                 0  1  2
+
+let num = [5, 8, 2]
+console.log(`Nosso vetor é o ${num}`)
+
+num[3] = 6      /* adicionando um indice [3] + valor = 6 */
+console.log(`Agora nosso vetor é ${num}`)
+
+num.push(7)     /* o push adiciona o valor criando sempre um novo indice [4]  */
+console.log(`Agora nosso vetor é ${num}`)
+
+/* Para sabe o comprimentdo de um vetor(quantidade de indices  num.length) */
+console.log(`meu vetor tem ${num.length} posições`)
+
+/* mostrando posição de forma isolada */
+console.log(`O primeiro valor do vetor é ${num[0]}`)
+console.log(num[1])  /* o segundo valor é 8 */
+
+/* metodo sort() */
+num.sort() /* colocará  os valores em oordem crescente*/
