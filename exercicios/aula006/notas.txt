@@ -609,7 +609,7 @@ VAR n = 5  >>  VAR n = 20  ( o valor da var será  subistituido)
 
 - Variaveis compostas podem armazenar varios vares na mesma estrutura  EX:
 
-Criando um Array
+Criando um Array  ou ( VETOR - variável com varios espaços)
 var frutas = ['Maçã', 'Banana'];
 
 console.log(frutas.length);
@@ -624,7 +624,7 @@ Numa variavel composta, posso criar uma var com varios itens, e identificalos co
 (uma VAR que guarda varios valores) - auto
 vetor array  ou variavel composta  é \        - var auto = []
 [VETOR É UMA  VARIAVEL CM VARIOS ESPAÇOES]    - var auto = ['gol', 'hb20', 'argo']
-[Um VETOR  é composto por elementos]                          0       1       2
+[Um VETOR  é composto por elementos]                         0       1       2  <--- indice/chave
 [UM elemento VETOR, é um par que agrupa >> O espaço na memoria, o valor atribuido a ele(nome)
 e o indice - que são os numeros das posições aos valores [0,1,2,3,4,5...]]
 
@@ -634,20 +634,23 @@ e o indice - que são os numeros das posições aos valores [0,1,2,3,4,5...]]
                  0  1  2
 
 let num = [5, 8, 2]
-console.log(`Nosso vetor é o ${num}`)
+console.log(`Nosso vetor é o ${num}`) --- Nosso vetor é o 5,8,2
 
-num[3] = 6      /* adicionando um indice [3] + valor = 6 */
-console.log(`Agora nosso vetor é ${num}`)
+num[3] = 6      /* adicionando um indice [3] + valor = 6  (ou substitui indice já existente) */
+console.log(`Agora nosso vetor é ${num}`)  -- Agora nosso vetor é 5,8,2,6
 
 num.push(7)     /* o push adiciona o valor criando sempre um novo indice [4]  */
-console.log(`Agora nosso vetor é ${num}`)
+console.log(`Agora nosso vetor é ${num}`)  -- Agora nosso vetor é 5,8,2,6,7
 
 /* Para sabe o comprimentdo de um vetor(quantidade de indices  num.length) */
-console.log(`meu vetor tem ${num.length} posições`)
+console.log(`meu vetor tem ${num.length} posições`) -- Meu vetor tem 5 posições
 
 /* mostrando posição de forma isolada */
-console.log(`O primeiro valor do vetor é ${num[0]}`)
-console.log(num[1])  /* o segundo valor é 8 */
+console.log(`O primeiro valor do vetor é ${num[0]}`)  -- O primeiro valor do vetor é 5
+console.log(num[1])  /* o segundo valor é 8 */  (5,8,2,6,7)
 
 /* metodo sort() */
-num.sort() /* colocará  os valores em oordem crescente*/
+num.sort() /* colocará  os valores em oordem crescente*/  [2,5,6,7,8]
+
+**} ATENTE-SE, A ORDEM DAS LINHAS DE CODIGO PD INFLUENCIAR O REUSLTADO FINAL DO PROG.}
+
