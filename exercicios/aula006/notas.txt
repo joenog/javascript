@@ -654,3 +654,27 @@ num.sort() /* colocará  os valores em oordem crescente*/  [2,5,6,7,8]
 
 **} ATENTE-SE, A ORDEM DAS LINHAS DE CODIGO PD INFLUENCIAR O REUSLTADO FINAL DO PROG.}
 
+} Mostrando VETORES com mormataçao - não é bonita pra um produto final
+
+let valores = [1,5,6,7,8,2,5,6]
+
+console.log(valores)  - metod sem formatação
+~ [1,5,6,7,8,2,5,6]
+
+}motodo FORMATADO!   - chamado: percurso para exibição do vertor
+/*enquanto POS for menor que tamanho do vetor NUM, icremente +1 no POS*/
+for(let pos= 0; pos < num.length; pos++) {
+    console.log(num[pos])
+}
+
+} MODO SIMPLIFICAOD 
+for(let pos in num) {  /* para cada posição dentro de NUM, motrarei o NUM[pos] posição do num */ 
+    console.log(num[pos])
+}
+
+} BUSCAR valores no VETOR  indexOf(5)
+console.log(`A posição/index do 6 é: ${num.indexOf(6)}`)
+~~ A posição/index do 6 é: 1
+
+/*valor que não exita na variavel  > -1 */
+console.log(num.indexOf(55))

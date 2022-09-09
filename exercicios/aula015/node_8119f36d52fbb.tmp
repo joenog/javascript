@@ -10,10 +10,6 @@ for(let pos= 0; pos < num.length; pos++) { /*enqnto POS for menor que o tamanho 
     console.log(`A posição ${pos} tem o valor ${num[pos]}`)
 }
 
-for(let pos in num) {  /* para cada posição dentro de NUM, motrarei o NUM[pos] posição do num */ 
-    console.log(num[pos])
+for (let ad = 2; ad < num.length; ad=+2) {
+    console.log(num[ad])
 }
-console.log(`A posição/index do 6 é: ${num.indexOf(6)}`)
-
-/*valor que não exita na variavel  > -1 */
-console.log(num.indexOf(55))
