@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JavaScript</title>
+    <style> 
+        body, div {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 400px;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Praticando JavaScript</h1>
+    </header>
+    <section>
+        <div id="res">
+            RESULTADO
+        </div>
+        <input type="button" value="INCIAR" onclick="go()">
+        <script>
+            function go() {
+                var res = document.querySelector('#res')
+                var valor = Number(prompt('Quanto custou ?'))
+                var caro = 200
+                if (valor > caro) {
+                    res.innerHTML = `${valor} reais? kkkkkkkkkkkkkklkkkk vsf`
+                } else {
+                    res.innerHTML = `${valor} blzzzzzzzz!`
+                }
+            }
+        </script>
+
+        <h2>PRATICANDO COM STRING </h2>
+
+        <div id="resp">
+            RESULTADO
+        </div>
+        <input type="button" value="INICIAR" onclick="vai2()">
+        <script>
+            function vai2() {
+                var res = document.querySelector('#resp')
+                var curso = String(prompt('Está fazendo que curso ?'))
+                if (curso == 'js' || curso == 'javascript') {
+                    res.innerHTML = `${curso} otimo curso !`
+                    res.style.background = 'blue'
+                } else {
+                    res.innerHTML = `Melhor fazer javascript!`
+                    res.style.background = 'red'
+                }
+            }
+        </script>
+    </section>
+</body>
+</html>

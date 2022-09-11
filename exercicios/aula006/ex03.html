@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WrintIn</title>
+</head>
+<body>
+    <h1>ESCREVENDO EM TODA A TELA</h1>
+    <p id="res"> RESULTADO </p>
+    <input type="button" value="INICIAR" onclick="go()">
+
+    <script>
+        function go() {
+            var res = document.querySelector('#res')
+            var nome = prompt('Qual seu nome?')
+            if (nome == 'hu' || nome == 'ha') {
+                document.writeln(`Olá ${nome.toLocaleUpperCase()} bemvindo!!`)
+                document.body.style.background = 'blue'
+            } else {
+                res.innerHTML = '<strong>D.A GOT THAT DOPE</strong>'
+            }
+        }
+    </script>
+</body>
+</html>

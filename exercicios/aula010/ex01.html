@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            background-color: grey;
+            height:  400px; width: 400px;
+            margin: auto;
+            text-align: center;
+            font-size: 4em;
+            line-height: 400px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eventos DOM</h1>
+    </header>
+
+    <section>
+        <div id="quad">
+            AOW
+        </div>
+
+        <script>
+            var quad = document.querySelector('#quad')
+            quad.addEventListener('click', clicou)
+            quad.addEventListener('mouseenter', entrou)
+            quad.addEventListener('mouseout', saiu)
+            quad.addEventListener('dblclick', duplo)
+
+            function clicou() {
+                quad.innerHTML = 'CLICOU!'
+                quad.style.background = 'red'
+            }
+            function entrou() {
+                quad.innerHTML = 'ENTROU'
+                quad.style.background = 'blue'
+            }
+            function saiu() {
+                quad.innerHTML = 'SAIU'
+                quad.style.background = 'grey'
+            }
+
+            function duplo() {
+                quad.innerHTML = 'DUPLO CLICK!'
+                quad.style.background = 'green'
+            }
+        </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+</head>
+<body>
+    <h1>Operadores Lógicos</h1>
+    <h1>Calculando salario</h1>
+
+    <p id="res"> RESULTAOD</p>
+     <input type="button" value="INICIAR" onclick="vai()">
+
+     <script>
+        function vai() {
+            let res = document.querySelector('#res')
+            let aula = Number(prompt('Fez quantas aulas esse mês ?'))
+            let calc = aula * 2 * 4 * 4.5
+            res.innerHTML = `Salario: ${calc}`
+        }
+     </script>
+</body>
+</html>
+
+<!------------------------------------------------------------------------->
+    <h2>Incrementando Numero</h2>
+    <input type="button" value="INCIAR" onclick="go()">
+    <p id="resut">RESSULTADO</p>
+    <script>
+        function go() {
+            let res = document.querySelector('#result')
+            var n1 = Number(prompt('Digite um numero para ser incrementado : '))
+            var n1 = ++n1
+            resut.innerHTML = `${n1}`
+        }
+    </script>

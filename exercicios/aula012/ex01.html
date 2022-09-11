@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade para votar"</title>
+    <style>
+        body, h1{
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        section, label {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 350px;
+            margin: auto;
+        } 
+        
+        div {
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Você tem idade para votar ?</h1>
+    </header>
+
+    <section>
+        <label for="idad">Idade</label>
+        <input type="number" name="idad" id="idad" min="0">
+        <input type="button" value="CHECAR" onclick="go()">
+        <div id="res">
+            RESULTADO ..
+        </div>
+
+        <script>
+            function go() {
+                var res = document.querySelector('#res')
+                var idad = document.querySelector('#idad')
+                var id = Number(idad.value)
+
+                if (id < 16) {
+                    res.innerHTML = `Você não pode votar!`
+                } else if (id <18 || id> 65) {
+                    res.innerHTML = `Voto opcional!`
+                } else {
+                    res.innerHTML = `Voto obrigatorio!`
+                }
+            }
+        </script>
+    </section>
+</body>
+</html>

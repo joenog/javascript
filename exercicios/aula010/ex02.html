@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listner</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            background-color: grey;
+            height: 200px; width: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 4em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lista de eventos</h1>
+    </header>
+    <section>
+        <div id="res">
+            REST
+        </div>
+        <div>
+            AOW
+        </div>
+
+        <script>
+            var quadr = document.querySelector('#res')
+            var quadra = document.getElementsByTagName('div')[1]
+            addEventListener('click', clicou)
+            addEventListener('mouseenter', entrou)
+
+            function clicou() {
+                quadr.style.background = 'green'
+                quadra.innerHTML = 'CLICK'
+                quadra.style.background = 'blue'
+            }
+        </script>
+    </section>
+</body>
+</html>

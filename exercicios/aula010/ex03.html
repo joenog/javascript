@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULO BAS.</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font: normal 1.3em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            padding:  5px 5px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid white;
+            width: 100px;
+        }
+
+        div {
+            background-color: white;
+            margin: 5px;  
+            text-indent: 5px;
+            width: 250px;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCULO BAS.</h1>
+
+    <label for="n1">N1</label>
+    <input type="number" name="n1" id="n1">
+    <label for="n2">N2</label>
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="CALCULAR" onclick="go()">
+
+    <div id="res">
+        RESULT
+    </div>
+
+    <script>
+        function go() {
+            var res = document.querySelector('#res')
+            var nu1 = document.querySelector('#n1')
+            var n1 = Number(nu1.value)
+            var nu2 = document.querySelector('#n2')
+            var n2 = Number(nu2.value)
+            var re = n1 * n1
+            res.innerHTML = `${n1.toLocaleString('pt-br')} x ${n2.toLocaleString('pt-br')} = ${re}`
+        }
+    </script>
+</body>
+</html>

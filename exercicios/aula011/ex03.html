@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>SISTEMA DE MULTAS</h1>
+    </header>
+
+        <label for="vel">VELOCIDADE: </label>
+        <input type="number" name="vel" id="vel">
+        <input type="button" value="ENVIAR" onclick="go()">
+
+        <dir id="res">
+            RESULTADO...
+        </dir>
+
+        <script>
+            var res = ``
+            function go() {
+                var res = document.querySelector('#res')
+                var velo = document.querySelector('#vel')
+                var vel = Number(velo.value)
+                if (vel < 60) {
+                    res.innerHTML = `DIRIJA COM CUIDADO! :D`
+                } else {
+                    res.innerHTML = `VOC FOI MULTADO POR EXCESSO DE VELOCIDADE !`
+                } if ( vel > 120) {
+                    res.innerHTML = `TAPOHHA MENÓ KKKKKKKKKKKK`
+                }
+            } 
+        </script>
+</body>
+</html>
