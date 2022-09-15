@@ -680,3 +680,16 @@ console.log(`A posição/index do 6 é: ${num.indexOf(6)}`)
 console.log(num.indexOf(55))
 ________________________________________________________________________
 
+}}16 [FUNÇÕES]
+
+1º Toda funçao precisa ter uma CHAMADA, a chamada pode ser verbal ou autmatizada
+2º Preciso de um parametro de entrada para poder execultar a função
+3º Depois da chamada e do parametro de entrada peciso execultar uma ação
+4º Por fim daremos o retorno
+(CHAMA, CONJUNT DE PARAMETROS, AÇÃO E RETORNO)
+nem todas as ações tem paramatros  e retornos
+
+{{FUNÇÕES SÃO AÇÕES EXECUTADAS ASSIM QUE SAO CHAMADAS OU EM DECORRENCIA DE UM EVENTO}}
+{{UMA FUNÇÃO PDOE RECEBER PARAMETROS E RETORNAR UM RESULTADO}}
+
+OS PARAMETROS FICAM ENTRE PARENTESES NA FUNÇÃO ()   funcion(paramt.) {}
