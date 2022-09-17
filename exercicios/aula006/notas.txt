@@ -686,10 +686,31 @@ ________________________________________________________________________
 2º Preciso de um parametro de entrada para poder execultar a função
 3º Depois da chamada e do parametro de entrada peciso execultar uma ação
 4º Por fim daremos o retorno
-(CHAMA, CONJUNT DE PARAMETROS, AÇÃO E RETORNO)
-nem todas as ações tem paramatros  e retornos
+(CHAMADA, CONJUNT DE PARAMETROS, AÇÃO E RETORNO)
+nem todas as ações tem paramatros e retornos
 
 {{FUNÇÕES SÃO AÇÕES EXECUTADAS ASSIM QUE SAO CHAMADAS OU EM DECORRENCIA DE UM EVENTO}}
-{{UMA FUNÇÃO PDOE RECEBER PARAMETROS E RETORNAR UM RESULTADO}}
+{{UMA FUNÇÃO PDE RECEBER PARAMETROS E RETORNAR UM RESULTADO}}
+
+] DENTRO dos parenteses, adiciono PARAMETROS [ ação(X) ], esses parametros serão processados aq pela
+ação e podem ter um resultado. Essa ação não se execultará por padrão, para execultá-la preciso de
+uma CHAMADA [ ação(5) ] com essa CHAMADA, 
 
 OS PARAMETROS FICAM ENTRE PARENTESES NA FUNÇÃO ()   funcion(paramt.) {}
+              ,[(n) parametro formal]
+function chamada(n) {  
+    if (n%2 == 0) {   <[ação - calculo]
+        return 'par'   <[retorno]
+    } else {
+        return 'impar'   [tenho 2 return mas só o TRUE será aplicado ao let]
+    }
+}
+                   ,[CHAMADA- parametro real]
+let res = achamada(11)  <[aq A CHAMADA: linha de disparo da ação enviado acima]
+----------------
+
+outro exemplo:
+function soma(n1=0, n2=0) {   /* adiciono o 0 caso o numero real posteriormente n seja requerido */
+    return n1 + n2
+}
+console.log(soma(10, 5))  /* caso seja requerido apenas o 10 ele será somado com 0 citado acima */
