@@ -5,9 +5,9 @@ console.log(soma(10, 5))  /* caso seja requerido apenas um valor ele será somad
 
 //--------------
 
-function soma(n1=0, n2=0,) {
-    return n1 + n2
+function soma(n1=0, n2=0, n3=0) {
+    return n1 + n2 + n3
 }
 
-var res = soma(2, 5)
+var res = soma(2, 5, 4)
 console.log(res)
